@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Задание 6</title>
+</head>
+<body>
+    <header>
+        <h1>Задание 6</h1>
+    </header>
+    <main>
+        <div class="page">
+            <div class="page__description">
+                Написать код приложения, интерфейс которого состоит из двух input и кнопки. В input можно ввести любое число.<br><br>
+
+                Заголовок первого input — «номер страницы».<br>
+                Заголовок второго input — «лимит».<br>
+                Заголовок кнопки — «запрос».<br>
+                При клике на кнопку происходит следующее:<br><br>
+                
+                Если число в первом input не попадает в диапазон от 1 до 10 или не является числом — выводится ниже текст «Номер страницы вне диапазона от 1 до 10»;<br>
+                Если число во втором input не попадает в диапазон от 1 до 10 или не является числом — выводится ниже текст «Лимит вне диапазона от 1 до 10»;<br>
+                Если и первый, и второй input не в диапазонах или не являются числами — выводится ниже текст «Номер страницы и лимит вне диапазона от 1 до 10»;<br>
+                Если числа попадают в диапазон от 1 до 10 — сделать запрос по URL https://picsum.photos/v2/list?page=1&limit=10, где GET-параметр page — это число из первого input, а GET-параметр limit — это введённое число второго input. <br>
+                Пример: если пользователь ввёл 5 и 7, то запрос будет вида https://picsum.photos/v2/list?page=5&limit=7.<br>
+                После получения данных вывести список картинок на экран.<br><br>
+               
+                Если пользователь перезагрузил страницу, то ему должны показываться картинки из последнего успешно выполненного запроса (использовать localStorage).<br><br>
+
+                Внимание: Для разблокировки доступа к ресурсу https://picsum.photos рекомендовано использовать VPN.
+            </div>
+
+            <div class="page__content">
+                <form class="page__form" action="#">
+                    <label class="page__label">Номер страницы (1-10):
+                        <input id="page_num" class="page__input" type="text" name="page_num" placeholder="Страница">
+                    </label>
+                    <label class="page__label">Лимит (1-10):
+                        <input id="page_limit" class="page__input" type="text" name="page_limit" placeholder="Лимит">
+                    </label>
+                    <div class="page__bottom">
+                        <div class="page__error"></div>
+                        <button id="btn_fetch" class="page__button" type="submit">Запрос</button>
+                    </div>
+                </form>
+            </div>
+    
+            <div id="response_container" class="page__content">
+                <div class="response__images">
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="copyright">
+            &copy;&nbsp;<a href="https://github.com/27X19">Тимур Зиганшин</a>, 2024. Поток PHPFRONT <a href="https://skillfactory.ru/">Skillfactory</a>.
+        </div>
+    </footer>
+    
+    <script type="module" src="./script_6.js"></script>
+</body>
+</html>

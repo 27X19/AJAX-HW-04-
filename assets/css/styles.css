@@ -1,0 +1,66 @@
+/* Новый современный стиль */
+
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #333;
+    --background-color: #f4f4f4;
+    --text-color: #222;
+    --font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.header {
+    width: 100%;
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.main-content {
+    width: 90%;
+    max-width: 800px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.info-box p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.footer {
+    margin-top: auto;
+    padding: 20px;
+    background: var(--secondary-color);
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.footer a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}

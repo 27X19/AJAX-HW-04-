@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Задание 5</title>
+</head>
+<body>
+    <header>
+        <h1>Задание 5</h1>
+    </header>
+    <main>
+        <div class="page">
+            <div class="page__description">
+                Написать код приложения, интерфейс которого состоит из поля ввода и кнопки «Получить список задач». При нажатии на кнопку нужно отправить запрос с помощью fetch на URL https://jsonplaceholder.typicode.com/users/3/todos. Число 3 представляет собой id пользователя, вместо него нужно подставить число, введенное в поле. Если пользователь с таким id существует, вернется список задач для этого пользователя, каждая задача представлена объектом<br><br>
+                
+                Где title — описание задачи, а completed — флаг, отображающий, выполнена задача или нет. Вывести данный список на страницу, оформив соответствующим образом: в виде списка (ul или ol), выполненные задачи должны быть написаны зачеркнутым текстом. Если пользователь с введенным id не существует, вывести сообщение:
+                «Пользователь с указанным id не найден».            
+            </div>
+
+            <div class="page__content">
+                <form class="page__form" action="#">
+                    <div class="page__form_header">Получить список задач</div>
+                    <label class="page__label">Идентификатор пользователя:
+                        <input id="user_id" class="page__input" type="text" name="user_id" placeholder="ID">
+                    </label>
+                    <button id="btn_fetch" class="page__button" type="submit">Получить список задач</button>
+                </form>
+            </div>
+    
+            <div id="response_container" class="page__content page__content--hidden">
+                <ul class="response__list" >                   
+                </ul>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="copyright">
+            &copy;&nbsp;<a href="https://github.com/27X19">Тимур Зиганшин</a>, 2024. Поток PHPFRONT <a href="https://skillfactory.ru/">Skillfactory</a>.
+        </div>
+    </footer>
+    
+    <script type="module" src="./script_5.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>Задание 3</title>
+</head>
+<body>
+    <header>
+        <h1>Задание 3</h1>
+    </header>
+    <main>
+        <div class="page">
+            <div class="page__description">
+                <p>Написать скрипт, который при открытии страницы будет делать следующее:</p>
+                <ul>
+                    <li>Если пользователь зашел в первый раз, вывести окно prompt с сообщением: <br>«Добро пожаловать! Назовите, пожалуйста, ваше имя».</li>
+                    <li>После того, как пользователь введет имя, записать имя, дату и время визита в localStorage.</li>
+                    <li>Если пользователь открывает страницу не впервые (это можно узнать по наличию соответствующих записей в localStorage), вывести в alert сообщение вида:</li>
+                    <blockquote>«Добрый день, *имя пользователя*! Давно не виделись. В последний раз вы были у нас *дата последнего посещения*»</blockquote>
+                    <li>Перезаписать дату последнего посещения.</li>
+                    <li>Дату можно вывести в любом удобочитаемом формате (не Timestamp, должен четко читаться день, месяц, год и время — часы и минуты).</li>
+                </ul>
+            </div>
+
+            <div id="visitor_form" class="page__content page__content--hidden">
+                <form class="page__form" action="#">
+                    <div class="page__form_header">Добро пожаловать!</div>
+                    <label class="page__label" for="visitor_name">Назовите, пожалуйста, Ваше имя:</label>
+                    <input id="visitor_name" class="page__input" type="text" name="visitor_name" placeholder="Имя">
+                    <button id="btn-save" class="page__button" type="submit">Запомнить</button>
+                </form>
+            </div>
+
+            <div id="visitor_message" class="page__content page__content--hidden">
+                <div class="page__form">
+                    <div id="visitor_header" class="page__form_header">Здравствуйте, Аноним!</div>
+                    <div id="visitor_text" class="page__form_text">
+                        В последний раз вы были у нас 20 Марта 2024 г. в 19:00
+                    </div>
+                    <button id="btn-forget" class="page__button" type="button">Забыть</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="copyright">
+            &copy;&nbsp;<a href="https://github.com/27X19">Тимур Зиганшин</a>, 2024. Поток PHPFRONT <a href="https://skillfactory.ru/">Skillfactory</a>.
+        </div>
+    </footer>
+    
+    <script type="module" src="./script_3.js"></script>
+</body>
+</html>
